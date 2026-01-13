@@ -99,23 +99,23 @@ process will take place when the WebClient is configured properly.
 
 ### WebClient config and how it works
 
-// ============================================================================
-// STEP-BY-STEP: How It Works
-// ============================================================================
-
-package com.example.oauth2.webclient;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.oauth2.client.*;
-import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
-import org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizedClientManager;
-import org.springframework.security.oauth2.client.web.OAuth2AuthorizedClientRepository;
-import org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction;
-import org.springframework.web.reactive.function.client.WebClient;
-
-@Configuration
-public class WebClientOAuth2Config {
+    // ============================================================================
+    // STEP-BY-STEP: How It Works
+    // ============================================================================
+    
+    package com.example.oauth2.webclient;
+    
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.security.oauth2.client.*;
+    import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+    import org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizedClientManager;
+    import org.springframework.security.oauth2.client.web.OAuth2AuthorizedClientRepository;
+    import org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction;
+    import org.springframework.web.reactive.function.client.WebClient;
+    
+    @Configuration
+    public class WebClientOAuth2Config {
 
     // ========================================================================
     // STEP 1: Configure OAuth2AuthorizedClientManager
@@ -169,12 +169,12 @@ public class WebClientOAuth2Config {
     }
 }
 
-// ============================================================================
-// WHAT HAPPENS BEHIND THE SCENES WHEN YOU MAKE A REQUEST
-// ============================================================================
-
-
-SCENARIO: You call webClient.get().uri("/api/data").retrieve().bodyToMono(String.class)
+    // ============================================================================
+    // WHAT HAPPENS BEHIND THE SCENES WHEN YOU MAKE A REQUEST
+    // ============================================================================
+    
+    
+    SCENARIO: You call webClient.get().uri("/api/data").retrieve().bodyToMono(String.class)
 
 STEP-BY-STEP FLOW:
 
