@@ -92,6 +92,12 @@ process will take place when the WebClient is configured properly.
 
 ### WebClient config and how it works
 
+  CONFIGURATION steps
+- application.yml defines client registration
+- WebClient configuration applies the OAuth2 filter
+- OAuth2AuthorizedClientManager handles lifecycle of Token
+
+
     // ============================================================================
     // STEP-BY-STEP: How It Works
     // ============================================================================
